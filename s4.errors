@@ -1,0 +1,24 @@
+Assembling S4.XZAP.1 on Thursday, October 2, 1986 22:03:54
+Release: 60
+
+    64	Inserting S4FREQ.XZAP.2	   (634 bytes)
+   698	Inserting S4DAT.ZAP.1	 (19961 bytes)
+ 20659	Inserting MISC.ZAP.1	  (1826 bytes)
+ 22485	Inserting PARSER.ZAP.1	  (6083 bytes)
+ 28568	Inserting SYNTAX.ZAP.1	     (0 bytes)
+ 28568	Inserting VERBS.ZAP.1	 (15191 bytes)
+ 43759	Inserting GLOBALS.ZAP.1	 (14345 bytes)
+ 58104	Inserting EARTH.ZAP.1	 (19174 bytes)
+ 77278	Inserting VOGON.ZAP.1	  (5744 bytes)
+ 83022	Inserting UNEARTH.ZAP.1	  (9740 bytes)
+ 92762	Inserting HEART.ZAP.1	 (13513 bytes)
+106275	Inserting S4STR.ZAP.1	  (7055 bytes)
+220 objects.
+239 globals.
+971 word vocabulary.
+
+113330 bytes (111K).
+ 20453 bytes of preload.
+  9736 bytes of impure.
+
+Outputting symbol tables

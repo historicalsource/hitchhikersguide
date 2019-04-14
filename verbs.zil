@@ -1079,12 +1079,12 @@ relax a little." CR>>
 		       <TELL "." CR>)>)
 	       (<FSET? ,PRSO ,DOORBIT>
 		<TELL "All you can tell is that">
+		<ARTICLE ,PRSO T>
+		<TELL " is ">
 		<COND (<FSET? ,PRSO ,OPENBIT>
-		       <ARTICLE ,PRSO T>
-		       <TELL " is open.">)
+		       <TELL "open.">)
 		      (T
-		       <ARTICLE ,PRSO T>
-		       <TELL " is closed.">)>
+		       <TELL "closed.">)>
 		<CRLF>)
 	       (<FSET? ,PRSO ,CONTBIT>
 		<COND (<PRSO? <LOC ,WINNER>>
@@ -1793,7 +1793,7 @@ D ,DISPENSER-BUTTON " from there." ,GETTING-CLOSE CR>)
 		<PERFORM ,V?REMOVE ,PRSO>
 		<RTRUE>)
 	       (<AND <FSET? ,PRSO ,INTEGRALBIT>
-		     <EQUAL? ,PRSI <LOC ,PRSO>>>
+		     <PRSI? <LOC ,PRSO>>>
 		<RFALSE>)
 	       (<OR <IN? ,PRSO ,PROTAGONIST>
 		    <AND <HELD? ,PRSO>
@@ -1803,8 +1803,8 @@ D ,DISPENSER-BUTTON " from there." ,GETTING-CLOSE CR>)
 		      (T
 		       <TELL "You already have it." CR>)>)
 	       (,PRSI
-		<COND (<PRSO? ,ME>
-		       <PERFORM ,V?DROP ,PRSI>
+		<COND (<PRSI? ,ME>
+		       <PERFORM ,V?DROP ,PRSO>
 		       <RTRUE>)
 		      (<AND <PRSO? ,ITEM-ON-SATCHEL>
 			    <PRSI? ,SATCHEL>>

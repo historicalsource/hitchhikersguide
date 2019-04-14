@@ -1340,9 +1340,9 @@ There is no causal relationship between these two events.">
 		<RTRUE>)
 	       (T
 		<MOVE ,PRSO ,LOCAL-GLOBALS>
-		<COND (<EQUAL? ,PRSO ,BROWNIAN-SOURCE>
+		<COND (<PRSO? ,BROWNIAN-SOURCE>
 		       <SETG BROWNIAN-SOURCE <>>)
-		      (<EQUAL? ,PRSO ,PANEL-BLOCKER>
+		      (<PRSO? ,PANEL-BLOCKER>
 		       <SETG PANEL-BLOCKER <>>)>
 		<TELL "It spills all over and then evaporates.">
 		<COND (<PRSO? ,MINERAL-WATER>
@@ -1422,12 +1422,12 @@ of complete happiness and relaxation.">
 	(ACTION NO-TEA-F)>
 
 <ROUTINE NO-TEA-F ()
-	 <COND (<AND <VERB? TAKE DROP>
+	 <COND (<AND <VERB? TAKE PICK-UP DROP>
 		     <PRSO? ,NO-TEA>
 		     <NOT <FSET? ,PARTICLE ,MUNGEDBIT>>>
 		<TELL
 "Your common sense tells you that you can't do that." CR>)
-	       (<AND <VERB? TAKE>
+	       (<AND <VERB? TAKE PICK-UP>
 		     <PRSO? ,NO-TEA>
 		     <NOT ,HOLDING-NO-TEA>>
 		<SETG HOLDING-NO-TEA T>
@@ -1456,7 +1456,7 @@ of complete happiness and relaxation.">
 		       <COND (<HELD? ,TEA>
 			      <RTRUE>)
 			     (<AND ,PRSI
-				   <NOT <EQUAL? ,PRSI <LOC ,PRSO>>>>
+				   <NOT <PRSI? <LOC ,PRSO>>>>
 			      <RTRUE>)
 			     (T
 			      <RFALSE>)>)

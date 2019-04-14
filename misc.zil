@@ -4,8 +4,6 @@
 
 ;"former MACROS.ZIL stuff"
 
-<ZSTR-OFF>
-
 <SETG C-ENABLED? 0>
 
 <SETG C-ENABLED 1>
@@ -163,9 +161,6 @@
 
 <DEFMAC DISABLE ('INT)
 	<FORM PUT .INT ,C-ENABLED? 0>>
-
-<ZSTR-ON>
-
 
 ;"former MAIN.ZIL stuff"
 

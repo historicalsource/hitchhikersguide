@@ -44,6 +44,7 @@ imagine what kind of beach communities they have.)" CR>)
 		<FSET ,PEANUTS ,TAKEBIT>
 		<FCLEAR ,PEANUTS ,NDESCBIT>
 		<FCLEAR ,PEANUTS ,TRYTAKEBIT>
+		<FCLEAR ,TOWEL ,TRYTAKEBIT>
 		<MOVE ,PEANUTS ,PROTAGONIST>
 		<MOVE ,FORD ,HERE>
 		<MOVE ,MINERAL-WATER ,FORD>
@@ -238,7 +239,8 @@ a " D ,ROBOT-PANEL " at the base of the wall. ">
 			       <MOVE ,BABEL-FISH ,PROTAGONIST>
 			       <COND (<RUNNING? ,I-ANNOUNCEMENT>
 				      <ENABLE <QUEUE I-GUARDS 4>>)
-				     (T
+				     (<NOT
+				       <FSET? ,CAPTAINS-QUARTERS ,TOUCHBIT>>
 				      <ENABLE <QUEUE I-ANNOUNCEMENT 4>>
 				      <ENABLE <QUEUE I-GUARDS 7>>)>
 			       <SETG FISH-COUNTER 0>

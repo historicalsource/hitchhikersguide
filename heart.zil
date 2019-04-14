@@ -282,6 +282,7 @@ he goes, \"with this terrible pain in all the diodes down my left side.\"" CR>)
 			       <SETG TOOL-REQUIRED <PICK-ONE ,TOOL-LIST>>
 			       <COND (<NOT <HELD? ,TOOL-REQUIRED ,PROTAGONIST>>
 				      <RETURN>)>>)>
+		       <SETG P-IT-OBJECT ,TOOL-REQUIRED>
 		       <SETG MARVIN-COUNTER 2>
 		       <TELL "Marvin, looking bored, says \"Hand me">
 		       <ARTICLE ,TOOL-REQUIRED>
@@ -1123,7 +1124,7 @@ anywhere in life? But don't read unless there's enough light.\"" CR>)>>
 
 <ROUTINE ZAPHOD-F ()
 	 <COND (<EQUAL? ,IDENTITY-FLAG ,ZAPHOD>
-		<COND (<EQUAL? ,ZAPHOD ,PRSO>
+		<COND (<PRSO? ,ZAPHOD ,PHIL>
 		       <PERFORM ,PRSA ,ME ,PRSI>
 		       <RTRUE>)
 		      (T
@@ -1491,7 +1492,7 @@ The " D ,SALES-BROCHURE " goes on to describe the ship's complement of " ,SCC
 		       <TELL
 "This is the room that houses the powerful In" ,FIG
 " that drives " D ,HEART-OF-GOLD ". An exit lies fore of here." CR>)>)
-	       (<AND <EQUAL? ,RARG ,M-END>
+	       (<AND <EQUAL? .RARG ,M-END>
 		     <EQUAL? ,LOOK-COUNTER 3>>
 		<SETG LOOK-COUNTER 4>
 		<TELL CR "(Footnote 10)" CR>)>>
@@ -1975,4 +1976,4 @@ to find out about." CR CR>
 "By the way, there WAS a causal relationship between your taking the "
 D ,TOOTHBRUSH " and the tree collapsing at the very beginning of the game.
 We apologise for this slight inaccuracy." CR>
-		<QUIT>)>>
+		<FINISH>)>>

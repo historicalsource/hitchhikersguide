@@ -475,7 +475,7 @@ The creature stirred in its sickly broiling vapour, and at that very moment
 the words \"">
 	 <RESTORE-INPUT ,FIRST-BUFFER>
 	 <TELL "\" drifted across the conference table.
-Unfortunately, in the Vl'hurg tongue this was the most dreadful insult
+Unfortunately, in the Vl'Hurg tongue this was the most dreadful insult
 imaginable, and there was nothing for it but to wage terrible war for
 centuries. Eventually the error was detected, but over two hundred and
 fifty thousand worlds, their peoples and cultures perished in the holocaust.|
@@ -719,7 +719,7 @@ to be some faint markings on it.")
 		<FSET ,WAR-CHAMBER ,REVISITBIT>
 		<TELL "As you remove the " D ,PARTICLE>
 		<JIGS-UP
-" electrical impulses begin leaping madly across the now-unblocked synaptic
+", electrical impulses begin leaping madly across the now-unblocked synaptic
 gap. Unfortunately, YOU were in the gap at the time.">
 		<RTRUE>)
 	       (<VERB? EXAMINE READ>
